@@ -316,6 +316,22 @@ br {
     }
 }
 
+#advantages {
+    position: relative;
+}
+#advantages::after {
+    content: "";
+    display: block;
+    height: 600px;
+    width: 474px;
+    position: absolute;
+    right: 0;
+    top: 580px;
+    background: url('img/blob_about.png') no-repeat center center;
+    z-index: -1;
+    overflow: hidden;
+}
+
 .big-carousel {
     &__body {
         display: flex;
