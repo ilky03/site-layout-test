@@ -153,7 +153,17 @@ br {
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 25px;
+                &:hover {
+                    cursor: pointer;
+                }
             }
+            img {
+                animation-name: moveUpDown;
+                animation-duration: 5s; /* Тривалість анімації */
+                animation-iteration-count: infinite; /* Зациклення анімації */
+                animation-timing-function: ease-in-out; /* Згладжування руху, ви можете вибрати інше значення */
+            }
+            
         }
         &_bottom {
             text-align: center;
@@ -194,15 +204,6 @@ br {
         transform: translateY(-10px); /* Зміна відстані, на яку картинка переміщається вгору */
     }
 }
-
-.myImage {
-    animation-name: moveUpDown;
-    animation-duration: 2s; /* Тривалість анімації */
-    animation-iteration-count: infinite; /* Зациклення анімації */
-    animation-timing-function: ease-in-out; /* Згладжування руху, ви можете вибрати інше значення */
-}
-
-
 
 /*main*/
 
@@ -362,3 +363,74 @@ br {
     }
 }
 
+.charity {
+    position: relative;
+    &__top {
+        display: flex;
+        justify-content: space-between;
+        // align-items: center;
+        gap: 400px;
+        p, h5 {
+            max-width: 749px;
+        }
+        h5 {
+            margin-top: 25px;
+            margin-bottom: 10px;
+        }
+        position: relative;
+        margin-bottom: 55px;
+        &_photos {
+            img {
+                border-radius: 5px;
+            }
+            :first-child {
+                position: absolute;
+                top: -25px;
+                right: 464px;
+            }
+            :nth-child(2) {
+                position: relative;
+                top: -110px;
+                z-index: -1;
+            }
+            :last-child {
+                position: absolute;
+                top: 85px;
+                right: 103px;
+            }
+        }
+    }
+    &__cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        background-color: #fff;
+        div {
+            max-width: 570px;
+            padding: 36px 24px;
+            text-align: center;
+            box-shadow: 0px 0px 20px 0px #4B55591A;
+            border-radius: 10px;
+            transition: .5s;
+            h6 {
+                margin: 16px 0;
+            }
+            &:hover {
+                cursor: pointer;
+                background-color: #ffd00e;
+            }
+        }
+    }
+    &::after {
+        content: "";
+        display: block;
+        height: 671px;
+        width: 659px;
+        position: absolute;
+        top: 44px;
+        right: 0;
+        background: url('img/blob_charity.png') no-repeat center center;
+        z-index: -1;
+        overflow: hidden;
+    }
+}

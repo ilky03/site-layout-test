@@ -153,6 +153,15 @@ br {
   font-weight: 700;
   line-height: 25px;
 }
+.header__block_top button:hover {
+  cursor: pointer;
+}
+.header__block_top img {
+  animation-name: moveUpDown;
+  animation-duration: 5s; /* Тривалість анімації */
+  animation-iteration-count: infinite; /* Зациклення анімації */
+  animation-timing-function: ease-in-out; /* Згладжування руху, ви можете вибрати інше значення */
+}
 .header__block_bottom {
   text-align: center;
 }
@@ -186,13 +195,6 @@ br {
     transform: translateY(-10px); /* Зміна відстані, на яку картинка переміщається вгору */
   }
 }
-.myImage {
-  animation-name: moveUpDown;
-  animation-duration: 2s; /* Тривалість анімації */
-  animation-iteration-count: infinite; /* Зациклення анімації */
-  animation-timing-function: ease-in-out; /* Згладжування руху, ви можете вибрати інше значення */
-}
-
 /*main*/
 .section {
   margin: 100px 0;
@@ -342,6 +344,74 @@ br {
   .carousel {
     overflow: hidden;
   }
+}
+.charity {
+  position: relative;
+}
+.charity__top {
+  display: flex;
+  justify-content: space-between;
+  gap: 400px;
+  position: relative;
+  margin-bottom: 55px;
+}
+.charity__top p, .charity__top h5 {
+  max-width: 749px;
+}
+.charity__top h5 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.charity__top_photos img {
+  border-radius: 5px;
+}
+.charity__top_photos :first-child {
+  position: absolute;
+  top: -25px;
+  right: 464px;
+}
+.charity__top_photos :nth-child(2) {
+  position: relative;
+  top: -110px;
+  z-index: -1;
+}
+.charity__top_photos :last-child {
+  position: absolute;
+  top: 85px;
+  right: 103px;
+}
+.charity__cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  background-color: #fff;
+}
+.charity__cards div {
+  max-width: 570px;
+  padding: 36px 24px;
+  text-align: center;
+  box-shadow: 0px 0px 20px 0px rgba(75, 85, 89, 0.1019607843);
+  border-radius: 10px;
+  transition: 0.5s;
+}
+.charity__cards div h6 {
+  margin: 16px 0;
+}
+.charity__cards div:hover {
+  cursor: pointer;
+  background-color: #ffd00e;
+}
+.charity::after {
+  content: "";
+  display: block;
+  height: 671px;
+  width: 659px;
+  position: absolute;
+  top: 44px;
+  right: 0;
+  background: url("img/blob_charity.png") no-repeat center center;
+  z-index: -1;
+  overflow: hidden;
 }
 
 /*# sourceMappingURL=style.css.map */
