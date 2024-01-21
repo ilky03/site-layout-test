@@ -25,6 +25,9 @@ a {
 
 button {
     border: 0;
+    &:hover {
+        cursor: pointer;
+    }
 }
 
 ul {
@@ -119,7 +122,6 @@ br {
             border-right: none;
         }
     }
-
     &__right-side {
         display: flex;
         justify-content: space-between;
@@ -136,7 +138,7 @@ br {
 }
 
 .header {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     background-color: rgba(255, 254, 252);
@@ -144,9 +146,8 @@ br {
     background-size: cover;
     background-repeat: no-repeat;
     padding: 0 75px;
-
     &__block {
-        margin-top: 100px;
+        margin-top: 10vh;
         &_top {
             display: flex;
             justify-content: space-between;
@@ -159,17 +160,14 @@ br {
                 font-size: 20px;
                 font-weight: 700;
                 line-height: 25px;
-                &:hover {
-                    cursor: pointer;
-                }
             }
             img {
+                width: 70vh;
                 animation-name: moveUpDown;
                 animation-duration: 5s; /* Тривалість анімації */
                 animation-iteration-count: infinite; /* Зациклення анімації */
                 animation-timing-function: ease-in-out; /* Згладжування руху, ви можете вибрати інше значення */
             }
-            
         }
         &_bottom {
             text-align: center;
@@ -178,7 +176,6 @@ br {
             }
         }
     }
-
     &__slider {
         &_btns {
             position: absolute;
@@ -258,20 +255,84 @@ br {
     justify-content: space-between;
     padding: 50px 75px;
     background: linear-gradient(134.04deg, #FFDF00 -7.01%, #FFB800 109.07%),linear-gradient(0deg, #FFFEFC, #FFFEFC);
-    
     p, h6 {
         max-width: 870px;
     }
-
     br {
         margin: 7.5px;
     }
-
     &__logos {
         display: flex;
         align-items: center;
         gap: 50px;
         margin-top: 28px;
+    }
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-between;
+    gap: 450px;
+    background-image: url("img/advant_circle.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 670px;
+    h5 {
+        margin-bottom: 10px;
+    }
+    &__left {
+        text-align: right;
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+        flex-direction: column;
+        div {
+            max-width: 505px;
+        }
+        &_small-gap {
+            margin-right: 135px;
+        }
+        &_big-gap {
+            margin-right: 165px;
+        }
+    }
+    &__right {
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-direction: column;
+        div {
+            max-width: 505px;
+        }
+        &_small-gap {
+            margin-left: 135px;
+        }
+        &_big-gap {
+            margin-left: 165px;
+        }
+    }
+}
+
+.big-carousel {
+    &__body {
+        display: flex;
+        gap: 14px;
+        overflow: hidden;
+    }   
+    margin-top: 50px;
+    position: relative;
+    &__btn {
+        &_left {
+            top: 38px;
+            left: -28px;
+        }
+        &_right {
+            top: 117px;
+            right: -28px;
+        }
     }
 }
 
@@ -328,7 +389,7 @@ br {
     gap: 30px;
     padding: 20px;
     margin: -20px;
-    // position: relative;
+    overflow:hidden;
     div {
         display: flex;
         align-items: center;
@@ -363,18 +424,11 @@ br {
     }
 }
 
-@media screen and (max-width: 1900px) {
-    .carousel {
-        overflow:hidden;
-    }
-}
-
 .charity {
     position: relative;
     &__top {
         display: flex;
         justify-content: space-between;
-        // align-items: center;
         gap: 400px;
         p, h5 {
             max-width: 749px;
@@ -463,15 +517,14 @@ br {
         flex-wrap: wrap;
         width: 100%;
         padding-bottom: 55px;
+        background: #333333 url("img/footer_bg.jpg") no-repeat center;
+        color: #fff;
         div {
-            width: 292px;
+            max-width: 292px;
         }
         p {
             margin: 20px 0;
         }
-
-        background: #333333 url("img/footer_bg.jpg") no-repeat center;
-        color: #fff;
         &_social-links {
             a {
                 margin-right: 45px;
@@ -493,6 +546,42 @@ br {
         .regular a {
             color: #fff;
             text-decoration: underline;
+        }
+    }
+}
+
+@media screen and (max-width: 1600px) {
+    .advantages {
+        h5 {
+            margin-bottom: 5px;
+            font-size: 18px;
+        }
+        .regular-small {
+            font-size: 14px;
+        }
+    }
+    .title {
+        font-size: 60px;
+        line-height: 70px;
+    }
+    .footer {
+        h4 {
+            font-size: 18px;
+        }
+        .regular-small {
+            font-size: 14px;
+        }
+        .regular-big {
+            font-size: 16px;
+        }
+        &__right {
+            padding-left: 30px;
+            padding-right: 30px;
+        }
+        &__right_social-links {
+            a {
+                margin-right: 35px;
+            } 
         }
     }
 }

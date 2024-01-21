@@ -26,6 +26,9 @@ a {
 button {
   border: 0;
 }
+button:hover {
+  cursor: pointer;
+}
 
 ul {
   list-style: none;
@@ -133,7 +136,7 @@ br {
 }
 
 .header {
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   background-color: rgb(255, 254, 252);
@@ -143,7 +146,7 @@ br {
   padding: 0 75px;
 }
 .header__block {
-  margin-top: 100px;
+  margin-top: 10vh;
 }
 .header__block_top {
   display: flex;
@@ -159,10 +162,8 @@ br {
   font-weight: 700;
   line-height: 25px;
 }
-.header__block_top button:hover {
-  cursor: pointer;
-}
 .header__block_top img {
+  width: 70vh;
   animation-name: moveUpDown;
   animation-duration: 5s; /* Тривалість анімації */
   animation-iteration-count: infinite; /* Зациклення анімації */
@@ -261,6 +262,71 @@ br {
   margin-top: 28px;
 }
 
+.advantages {
+  display: flex;
+  justify-content: space-between;
+  gap: 450px;
+  background-image: url("img/advant_circle.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 670px;
+}
+.advantages h5 {
+  margin-bottom: 10px;
+}
+.advantages__left {
+  text-align: right;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+}
+.advantages__left div {
+  max-width: 505px;
+}
+.advantages__left_small-gap {
+  margin-right: 135px;
+}
+.advantages__left_big-gap {
+  margin-right: 165px;
+}
+.advantages__right {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.advantages__right div {
+  max-width: 505px;
+}
+.advantages__right_small-gap {
+  margin-left: 135px;
+}
+.advantages__right_big-gap {
+  margin-left: 165px;
+}
+
+.big-carousel {
+  margin-top: 50px;
+  position: relative;
+}
+.big-carousel__body {
+  display: flex;
+  gap: 14px;
+  overflow: hidden;
+}
+.big-carousel__btn_left {
+  top: 38px;
+  left: -28px;
+}
+.big-carousel__btn_right {
+  top: 117px;
+  right: -28px;
+}
+
 .contribution__cards {
   display: flex;
   justify-content: space-between;
@@ -312,6 +378,7 @@ br {
   gap: 30px;
   padding: 20px;
   margin: -20px;
+  overflow: hidden;
 }
 .carousel div {
   display: flex;
@@ -346,11 +413,6 @@ br {
   background-color: #FFE30B;
 }
 
-@media screen and (max-width: 1900px) {
-  .carousel {
-    overflow: hidden;
-  }
-}
 .charity {
   position: relative;
 }
@@ -446,7 +508,7 @@ br {
   color: #fff;
 }
 .footer__right div {
-  width: 292px;
+  max-width: 292px;
 }
 .footer__right p {
   margin: 20px 0;
@@ -468,6 +530,36 @@ br {
 .footer__right .regular a {
   color: #fff;
   text-decoration: underline;
+}
+
+@media screen and (max-width: 1600px) {
+  .advantages h5 {
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
+  .advantages .regular-small {
+    font-size: 14px;
+  }
+  .title {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  .footer h4 {
+    font-size: 18px;
+  }
+  .footer .regular-small {
+    font-size: 14px;
+  }
+  .footer .regular-big {
+    font-size: 16px;
+  }
+  .footer__right {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .footer__right_social-links a {
+    margin-right: 35px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
