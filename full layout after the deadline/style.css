@@ -132,7 +132,7 @@ br {
   flex-direction: column;
   background-color: rgb(255, 254, 252);
   background-image: url("img/header_bg.png");
-  background-size: center;
+  background-size: cover;
   background-repeat: no-repeat;
   padding: 0 75px;
 }
