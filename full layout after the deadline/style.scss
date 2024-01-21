@@ -50,8 +50,9 @@ h3 {
 }
 
 h4 {
-    font-size: 38px;
-    font-weight: 800;
+    font-size: 24px;
+    font-weight: 700;
+    line-height: 30px;
 }
 
 h5 {
@@ -78,6 +79,11 @@ h6 {
 .regular-small {
     font-size: 16px;
     line-height: 20px;
+}
+
+.regular-big {
+    font-size: 24px;
+    line-height: 30px;
 }
 
 .button {
@@ -432,5 +438,61 @@ br {
         background: url('img/blob_charity.png') no-repeat center center;
         z-index: -1;
         overflow: hidden;
+    }
+}
+
+/*footer*/
+
+.footer {
+    display: flex;
+    h4 {
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
+    &__left {
+        max-width: 525px;
+        background-color: #FFD00E;
+        padding: 40px 30px 55px 75px;
+        p {
+            margin: 30px 0 69px 0;
+        }
+    }   
+    &__right {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        width: 100%;
+        padding-bottom: 55px;
+        div {
+            width: 292px;
+        }
+        p {
+            margin: 20px 0;
+        }
+
+        background: #333333 url("img/footer_bg.jpg") no-repeat center;
+        color: #fff;
+        &_social-links {
+            a {
+                margin-right: 45px;
+            } 
+        }
+        &_startups {
+            div {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+            img {
+                height: 55px;
+                &:last-child {
+                    height: auto;
+                }
+            }
+        }
+        .regular a {
+            color: #fff;
+            text-decoration: underline;
+        }
     }
 }
