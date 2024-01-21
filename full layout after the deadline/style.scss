@@ -250,3 +250,93 @@ br {
     }
 }
 
+.contribution {
+    &__cards {
+        display: flex;
+        justify-content: space-between;
+        gap: 30px;
+        div {
+            position: relative;
+            padding: 20px 30px;
+            max-width: 570px;
+            overflow: hidden;
+            border: 2px solid #f5f6f6;
+            border-radius: 10px;
+            :nth-child(2) {
+                margin: 15px 0;
+            }
+            &::after {
+                content: "";
+                display: block;
+                position: absolute;
+                height: 266px;
+                width: 266px;
+                left: 105%;
+                top: 50%;
+                transform: translate(-50%, -50%);
+                border-radius: 50%;
+                background-color: #fffae6;
+                z-index: -1;
+                transition: .5s;
+            }
+            &:hover {
+                &::after {
+                    content: "";
+                    display: block;
+                    width: 400%;
+                    border-radius: 0;
+                    background-color: #fffae6;
+                    z-index: -1;
+                }
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+.carousel {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    margin: -20px 0;
+    position: relative;
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #fff;
+        box-shadow: 0px 0px 20px 0px #4B55591A;
+        border-radius: 4.39px;
+        padding: 0 19px;
+        min-width: 270px;
+        height: 147px; 
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    &__btn {
+        width: 56px;
+        height: 53px;
+        position: absolute;
+        &_left {
+            left: 0;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &_right {
+            left: 100%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+        &_active {
+            background-color: #FFE30B;
+        }
+    }
+}
+
+@media screen and (max-width: 1900px) {
+    .carousel {
+        overflow:hidden;
+    }
+}
+
